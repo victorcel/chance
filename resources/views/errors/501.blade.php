@@ -1,0 +1,28 @@
+@extends('layout.application')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Error Inesperado</div>
+
+                    <div class="panel-body">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+
+                        <a href="{{ route('login') }}" class="btn btn-primary">
+                            <i class="fa fa-chevron-circle-left"></i> Regresar
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@stop
+
